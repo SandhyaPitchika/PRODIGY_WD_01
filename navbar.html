@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #18e60d;
+}
+
+.section {
+    padding: 100px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+#home { background-color: #32a4a2; height: 100vh; }
+#services { background-color: #9c3838; height: 100vh; }
+#about { background-color: #3f2b92; height: 100vh; }
+#contact { background-color: #5ac329; height: 100vh; }
+
+.scrolled {
+    background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="section">Home Section</div>
+    <div id="services" class="section">Services Section</div>
+    <div id="about" class="section">About Section</div>
+    <div id="contact" class="section">Contact Section</div>
+
+   <script>
+    window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+   </script>
+</body>
+</html>

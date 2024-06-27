@@ -1,6 +1,7 @@
 # PRODIGY_WD_01
 PIT/JUN24/07945
 
+![Screenshot 2024-06-27 192648](https://github.com/SandhyaPitchika/PRODIGY_WD_01/assets/173603999/0bcd9ef9-1378-420d-ba0f-7028da4c035a)
 ## Features
 Navbar Component:
 Responsive design that adapts to various screen sizes.
